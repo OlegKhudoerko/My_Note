@@ -40,7 +40,7 @@ def start():
 
             elif prog == 'show_all':
                 if len(json_model.load_file()) == 0:
-                    print("Список пуст. Вы не создали ни одной заметки!")
+                    print("Список пуст. У Вас нет ни одной заметки!")
                 show_all_notice()
 
             elif prog == 'search':
