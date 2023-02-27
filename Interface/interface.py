@@ -1,5 +1,7 @@
 from datetime import datetime
 
+import json_model
+
 
 class Notes:
     id = 0
@@ -8,6 +10,7 @@ class Notes:
     change_date = None
 
     def __init__(self, title, msg):
+
         self.id = Notes.id + 1
         Notes.id += 1
         self.title = title
@@ -23,6 +26,7 @@ class Notes:
         return details
 
     def get_id(self):
+        self.id = len(json_model.load_file()) + 1
         return self.id
 
     def get_title(self):
